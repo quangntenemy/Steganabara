@@ -39,4 +39,4 @@ Related
 
 Contact
 =======
-If you encountered any bug with Steganabara, or have any idea for new features/techniques, you can either [email me](mailto:quangntenemy[at]gmail.com), [post a comment in my blog](http://quangntenemy.blogspot.com/), or [post a comment on the Ohloh project page](http://www.ohloh.net/projects/steganabara/).
+If you encountered any bug with Steganabara, or have any idea for new features/techniques, you can either [email me](mailto:quangntenemy[at]gmail.com), [post a comment in my blog](http://quangntenemy.blogspot.com/), or [post a comment on the OpenHub project page](https://www.openhub.net/p/steganabara).
