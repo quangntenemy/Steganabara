@@ -30,6 +30,12 @@ The Color Table provides a more detailed view of the histogram. Just like histog
 Demonstrations
 ==============
 * [Bit Mask Filter applied on a stegano-image from wikipedia](http://wechall.blogspot.com/2007/11/steganabara-explained.html)
+* [TUTORIAL - Steganography in PNG Images](https://www.youtube.com/watch?v=KUZVIBXfoeA) by ARG Solving Station
+* [Steganabara used to solve a Sunshine CTF 2016 challenge](https://sljrobin.org/blog/sunshine-ctf-2016-butterfly-effect/)
+
+Related
+=======
+* [A Challengers Handbook by Caesum](http://www.caesum.com/handbook/stego.htm), with more information about steganography, reference to Steganabara and another tool for steganalysis - Stegsolve
 
 Contact
 =======
