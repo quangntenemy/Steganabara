@@ -31,7 +31,9 @@ Demonstrations
 ==============
 * [Bit Mask Filter applied on a stegano-image from wikipedia](http://wechall.blogspot.com/2007/11/steganabara-explained.html)
 * [TUTORIAL - Steganography in PNG Images](https://www.youtube.com/watch?v=KUZVIBXfoeA) by ARG Solving Station
-* [Steganabara used to solve a Sunshine CTF 2016 challenge](https://sljrobin.org/blog/sunshine-ctf-2016-butterfly-effect/)
+* [Bit Mask Filter used to solve a 3DS CTF 2016 challenge](http://quangntenemy.blogspot.com/2016/12/3ds-ctf-2016.html)
+* [Bit Mask Filter used to solve a Sunshine CTF 2016 challenge](https://sljrobin.org/blog/sunshine-ctf-2016-butterfly-effect/)
+* [Histogram analysis with Steganabara helped solve a ASIS CTF Quals 2014 challenge](http://quangntenemy.blogspot.com/2014/05/asis-ctf-quals-2014.html)
 
 Related
 =======
