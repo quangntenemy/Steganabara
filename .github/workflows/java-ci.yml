@@ -1,0 +1,98 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ master ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 8
+      uses: actions/setup-java@v4
+      with:
+        java-version: '8'
+        distribution: 'temurin'
+
+    - name: Install Ant
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ant
+
+    - name: Create build directory
+      run: mkdir -p bin
+
+    - name: Compile Java sources
+      run: |
+        javac -d bin -sourcepath src src/steganabara/*.java src/steganabara/*/*.java
+
+    - name: Generate Javadocs
+      run: ant -f javadoc.xml
+
+    - name: Build JAR
+      run: |
+        jar cfm steganabara.jar MANIFEST.MF -C bin .
+        echo "JAR built successfully"
+        ls -lh steganabara.jar
+
+    - name: Run Application (Dry Run)
+      run: |
+        java -jar steganabara.jar --help || true
+
+    - name: Create Application Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: steganabara-app
+        path: |
+          steganabara.jar
+          docs/
+          README.md
+        retention-days: 5
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: steganabara-app
+        path: ./release-artifacts
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: Steganabara ${{ github.ref_name }}
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+        files: |
+          ./release-artifacts/steganabara.jar
+        body: |
+          ## Steganabara Release ${{ github.ref_name }}
+
+          ### Installation
+
+          Download `steganabara.jar` and run with:
+          ```bash
+          java -jar steganabara.jar
+          ```
+
+          **Requirements:** Java 8 or higher
+
+          ### Documentation
+
+          See the [README](https://github.com/${{ github.repository }}/blob/master/README.md) for usage instructions.
