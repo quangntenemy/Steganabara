@@ -1,31 +1,52 @@
 Steganabara
 ===========
 
-Steganabara is a tool for stegano analysis ([steganalysis](https://en.wikipedia.org/wiki/Steganalysis)), with some of the ideas originated from my final year project.
+An advanced [steganalysis](https://en.wikipedia.org/wiki/Steganalysis) toolkit designed to reveal what's hidden in plain sight.
 
-As I solved many stegano challenges, Steganabara has now matured and is very effective on visual steganos, especially [BaRa's challenges](http://www.bright-shadows.net/userstats.php?username=BaRa).
+Built for solving challenges/CTF competitions, Steganabara has become a trusted instrument for solving [BARA-class challenges](http://www.bright-shadows.net/userstats.php?username=BaRa) - where precision, patience, and deep insight matter most.
+
+Its modular design and visual analysis features make it a quiet weapon in the hands of digital explorers and cybersecurity researchers alike.
 
 Features
 ========
 Bit Mask Filter
 ---------------
-An image is basically a map of ARGB values. A popular method for hiding data is using the bit layers of the ARGB elements. The Bit Mask Filter helps you analyse the bit layers, either seperately or in combination. The *amplify* option can make things clearer for human eyes.
+An image is basically a map of ARGB values. A popular method for hiding data is using the bit layers of the ARGB elements.
+
+The Bit Mask Filter helps isolates and visualizes these layers, either individually or in combination, revealing concealed information.
+
+The *Amplify* option enhances subtle differences, making hidden patterns visible to the human eye.
 
 Color Map Filter
 ----------------
-Another popular method is using different colors with similar RGB values that are indistinguishable by human eyes. But now with the Color Map Filter that trick won't work anymore.
+Another common steganographic technique involves using color variations with nearly identical RGB values - imperceptible to the human eye.
+
+The Color Map Filter exposes these subtle differences, transforming invisible color shifts into visible evidence.
+
+What once blended seamlessly now stands out in full contrast.
 
 Color Explorer
 --------------
-This is a must-have feature for every visual stegano tool. With this you can investigate each pixel closely.
+A must-have feature for any visual steganography toolkit.
+
+The Color Explorer lets you inspect each pixel's exact ARGB composition, making hidden irregularities and subtle encodings immediately visible.
+Precision down to the last bit.
 
 Histogram
 ---------
-A histogram is like a fingerprint for an image. By looking at an image histogram, you can tell how much data is contained within it. And many wonderful things can be done with histogram analysis, notably image classification. For steganalysis, histograms can be a big help in detecting noises and distortion caused by the hidden data.
+A histogram acts like an image's fingerprint - visualizing the distribution of pixel intensities.
+
+In steganalysis, histogram analysis can expose subtle noise patterns and distortions left behind by hidden data.
+
+It's an essential tool for detecting irregularities that human eyes can't see.
 
 Color Table
 -----------
-The Color Table provides a more detailed view of the histogram. Just like histograms, the statistics from the Color Table can help detecting the hidden data. And conveniently, double clicking on a row in the Color Table will take you to the Color Map for that color.
+The Color Table offers a detailed numerical view of an image's color distribution - a more granular extension of the histogram.
+
+Its statistical insights can reveal irregularities caused by hidden data.
+
+Double-click any row to jump directly to the Color Map for visual analysis of that specific color.
 
 Demonstrations
 ==============
@@ -41,4 +62,8 @@ Related
 
 Contact
 =======
-If you encountered any bug with Steganabara, or have any idea for new features/techniques, you can either [email me](mailto:quangntenemy[at]gmail.com), [post a comment in my blog](http://quangntenemy.blogspot.com/), or [post a comment on the OpenHub project page](https://www.openhub.net/p/steganabara).
+If you encounter any bugs in *Steganabara* or have ideas for new features or techniques, you're welcome to reach out through any of the following channels:
+- Open an issue or pull request on GitHub
+- [Email me](mailto:quangntenemy[at]gmail.com)
+- [Post a comment in my blog](http://quangntenemy.blogspot.com/)
+- Or maybe have a look at [my profile](https://github.com/quangntenemy) for (maybe) the most updated information.
